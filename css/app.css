@@ -1,0 +1,332 @@
+/*
+ * Copyright © 2012-2015, Intel Corporation. All rights reserved.
+ * Please see the included README.md file for license terms and conditions.
+ */
+
+/* Disable certain interactions on touch devices */
+/* SOURCE: https://github.com/ftlabs/fastclick/blob/master/examples/input.html */
+/* LICENSE: https://github.com/ftlabs/fastclick/blob/master/LICENSE */
+@font-face {
+    font-family: robotoRegular;
+    src: url(../font/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: robotoMedium;
+    src: url(../font/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: robotoLight;
+    src: url(../font/Roboto-Light.ttf);
+}
+
+body {
+    -webkit-touch-callout: none ;
+    -webkit-text-size-adjust: none ; -ms-text-size-adjust: none ;
+    -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ; user-select: none ;
+    -webkit-highlight: none ;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) ;
+    -webkit-tap-highlight-color: transparent ;      /* For some Androids */
+    font-family: robotoRegular;
+}
+
+/* Recommended for Windows 8 Phone */
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+html {
+    -ms-touch-action: pan-x ;
+}
+
+/* Recommended for Windows 8 Phone */
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+body {
+    -ms-touch-action: pan-y ;
+    -ms-content-zooming: none ;
+}
+
+/* allow copy-paste */
+input, textarea  {
+    -webkit-user-select: text ; -moz-user-select: text ; -ms-user-select: text ; user-select: text ;
+}
+
+body {
+    /* margin: 0.5rem ; */
+    background: white ;
+    color: black ;
+}
+
+.align-center {
+    text-align: center ;
+}
+
+.item-thumbnail-wide {
+    padding-left: 190px;
+}
+
+.item-thumbnail-wide img {
+    max-width: 170px !important;
+}
+
+.item-thumbnail-wide p {
+    white-space: normal;
+    max-height: 55px;
+}
+
+.item-places {
+    padding: 11px 11px 6px 11px;
+}
+
+.dashboard-img {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.dashboard-img:last {
+    margin-right: 11px;
+}
+
+.scroll-bar {
+    display: none !important;
+}
+
+/* ------- SEARCH ----*/
+.searchBar {
+	color: #fff;
+	margin: 0 !important;
+	padding: 0;
+  line-height: 54px;
+}
+.searchBar .icon {
+	font-size: 27px;
+	line-height: 1.2;
+	padding-right: 6px;
+	padding-left: 6px;
+}
+.searchBar .searchTxt {
+	border-bottom: 1px solid #fff;
+	left: 55px;
+	width: calc(100% - 100px);
+	position: fixed;
+	height: calc(100% - 10px);
+}
+.searchBar.numicons2 .searchTxt {
+	width: calc(100% - 135px);
+}
+.searchBar .searchTxt > .bgdiv {
+	background-color: #000000;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.3;
+}
+.searchBar .searchTxt > .bgtxt {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.searchBar .searchTxt input {
+	background-color: inherit;
+	color: #fff;
+	padding-left: 5px;
+	padding-right:5px;
+  width: 100%;
+  height: 44px;  
+  font-size: 16px;
+}
+
+/* Cards */
+
+.carddemoBasicUsage md-card {
+  min-height: 150px;
+}
+
+.background, .background .pane {
+    background-color: #f1f5f7;
+}
+
+.bar-header .icon, .bar-header .button-icon {
+    color: white !important;
+}
+
+.bar-header .title {
+    text-transform: uppercase;
+}
+
+*::-webkit-input-placeholder {
+  color: white !important;
+  opacity: 0.7;
+}
+*:-moz-placeholder {
+  color: white !important;
+  opacity: 0.7;
+}
+*:-ms-input-placeholder { /* IE10+ */
+  color: white !important;
+  opacity: 0.7;
+}
+.no-padding {
+    padding: 0px !important;
+}
+
+.item h2 {
+  font-size: 20px;
+  color: #616161;
+}
+
+.red {
+  color: #f36c60;    
+}
+
+.green {
+  color: #42bd41;    
+}
+
+.blue {
+  color: #6a8aff;    
+}
+
+.no-margin {
+  margin: 0 !important;   
+}
+
+.full-bg {
+  background: no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 180px;
+}
+
+.gallery {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.gallery .card {
+    margin-bottom: 0;
+}
+
+.gallery a {
+    text-decoration: none;
+    position: relative;
+    float: left;
+    margin: 10px;
+}
+
+.gallery a h3 {
+  float: left;
+  position: absolute;
+  bottom: -11px;
+  left: 0px;
+  /*background: rgba(0, 0, 0, 0.45);*/
+  text-shadow: 0px 0px 5px rgba(70, 70, 70, 1);
+  color: white;
+  padding: 5px 7px;
+  font-weight: normal;
+}
+
+.gallery a span.top-icon {
+  float: left;
+  position: absolute;
+  top: 0px;
+  /*background: rgba(0, 0, 0, 0.45);*/
+  text-shadow: 0px 0px 5px rgba(70, 70, 70, 1);
+  color: white;
+  padding: 5px 7px;
+  font-weight: normal;
+}
+
+.gallery .left {
+  left: 0px;
+}
+
+.gallery .right {
+  right: 0px;
+}
+
+
+.space {
+    height:  15px;
+}
+
+button.button-icon.round-overlay-button {
+  position: absolute;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  min-height: 56px;
+  padding: 0;
+  border: none;
+  background-color: #ffc900;
+  color: white;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all linear 220ms;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+button.button-icon.round-overlay-button.energized {
+  background-color: #ffc900;
+  color: white;
+}
+button.button-icon.round-overlay-button.energized.activated {
+  background-color: #b38d00;
+}
+button.button-icon.round-overlay-button.assertive {
+  background-color: #ef473a;
+  color: white;
+}
+button.button-icon.round-overlay-button.assertive.activated {
+  background-color: #cc1e11;
+}
+button.button-icon.round-overlay-button.positive {
+  background-color: #387ef5;
+  color: white;
+}
+button.button-icon.round-overlay-button.positive.activated {
+  background-color: #0b56d6;
+}
+button.button-icon.round-overlay-button.stable {
+  background-color: rgba(0, 0, 0, 0.26);
+  color: rgba(0, 0, 0, 0.26);
+}
+button.button-icon.round-overlay-button.stable.activated {
+  background-color: rgba(0, 0, 0, 0.26);
+}
+button.button-icon.round-overlay-button.icon:before {
+  font-size: 24px;
+}
+button.button-icon.round-overlay-button.small {
+  height: 40px;
+  width: 40px;
+  min-height: 40px;
+  padding: 0;
+  border: none;
+}
+button.button-icon.round-overlay-button.small.icon:before {
+  line-height: 40px;
+}
+button.button-icon.round-overlay-button.activated {
+  opacity: 1;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+}
+button.button-icon.round-overlay-button.left {
+  left: 1px;
+  top: 16px;
+}
+button.button-icon.round-overlay-button.bottom-edge-right {
+  bottom: -24px;
+  right: 16px;
+  z-index: 12;
+}
+button.button-icon.round-overlay-button.bottom-right {
+  bottom: 0;
+  margin-bottom: 16px;
+  right: 16px;
+  z-index: 2;
+}
+button.button-icon.round-overlay-button.bottom-right.slide-down {
+  transform: translate3d(0, 88px, 0);
+}
